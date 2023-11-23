@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext"
 )
 
 func StateKey(ctx *ext.Context, strategy KeyStrategy) string {

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext"
 )
 
 var KeyNotFound = errors.New("conversation key not found")

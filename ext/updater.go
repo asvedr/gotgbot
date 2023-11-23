@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2"
 )
 
 func Test_botMapping(t *testing.T) {

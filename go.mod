@@ -1,3 +1,3 @@
-module github.com/PaulSonOfLars/gotgbot/v2
+module github.com/asvedr/gotgbot/v2
 
-go 1.19
+go 1.21
