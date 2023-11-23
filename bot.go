@@ -14,6 +14,7 @@ import (
 type Bot struct {
 	// Token stores the bot's secret token obtained from t.me/BotFather, and used to interact with telegram's API.
 	Token string
+	opts  *BotOpts
 
 	// The bot's User info, as returned by Bot.GetMe. Populated when created through the NewBot method.
 	User
@@ -38,11 +39,37 @@ type BotOpts struct {
 
 // NewBot returns a new Bot struct populated with the necessary defaults.
 func NewBot(token string, opts *BotOpts) (*Bot, error) {
+	bot := &Bot{
+		Token: token,
+		opts:  opts,
+		// BotClient: botClient,
+	}
+	err := bot.connect()
+	return bot, err
+}
+
+func NewBotNoConnect(token string, opts *BotOpts) *Bot {
+	return &Bot{
+		Token: token,
+		opts:  opts,
+		// BotClient: botClient,
+	}
+}
+
+func (bot *Bot) Reconnect(opts *BotOpts) error {
+	if opts != nil {
+		bot.opts = opts
+	}
+	return bot.connect()
+}
+
+func (bot *Bot) connect() error {
 	botClient := BotClient(&BaseBotClient{
 		Client:             http.Client{},
 		UseTestEnvironment: false,
 		DefaultRequestOpts: nil,
 	})
+	opts := bot.opts
 
 	// Large timeout on the initial GetMe request as this can sometimes be slow.
 	getMeReqOpts := &RequestOpts{
@@ -61,24 +88,18 @@ func NewBot(token string, opts *BotOpts) (*Bot, error) {
 		}
 		checkTokenValidity = !opts.DisableTokenCheck
 	}
-
-	b := Bot{
-		Token:     token,
-		BotClient: botClient,
-	}
-
+	bot.BotClient = botClient
 	if checkTokenValidity {
 		// Get bot info. This serves two purposes:
 		// 1. Check token is valid.
 		// 2. Populate the bot struct "User" field.
-		botUser, err := b.GetMe(&GetMeOpts{RequestOpts: getMeReqOpts})
+		botUser, err := bot.GetMe(&GetMeOpts{RequestOpts: getMeReqOpts})
 		if err != nil {
-			return nil, fmt.Errorf("failed to check bot token: %w", err)
+			return fmt.Errorf("failed to check bot token: %w", err)
 		}
-		b.User = *botUser
+		bot.User = *botUser
 	}
-
-	return &b, nil
+	return nil
 }
 
 // UseMiddleware allows you to wrap the existing bot client to enhance functionality
