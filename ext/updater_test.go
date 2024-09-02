@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/filters/message"
+	"github.com/asvedr/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext/handlers"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/filters/message"
 )
 
 func TestUpdaterThrowsErrorWhenSameWebhookAddedTwice(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext"
 )
 
 var ErrEmptyKey = errors.New("empty conversation key")

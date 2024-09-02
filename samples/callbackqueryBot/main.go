@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/filters/callbackquery"
+	"github.com/asvedr/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext/handlers"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/filters/callbackquery"
 )
 
 // This bot demonstrates some example interactions with telegram callback queries.

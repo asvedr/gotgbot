@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2"
 )
 
 func TestDispatcherStop(t *testing.T) {

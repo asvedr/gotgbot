@@ -1,7 +1,7 @@
 package conversation
 
 import (
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext"
 )
 
 // Storage allows you to define custom backends for retaining conversation conversations.

@@ -128,5 +128,5 @@ linters-settings:
   errcheck:
     check-type-assertions: true
     exclude-functions:
-      - (github.com/PaulSonOfLars/gotgbot/v2.Message).Reply
+      - (github.com/asvedr/gotgbot/v2.Message).Reply
       - (net/http.ResponseWriter).Write

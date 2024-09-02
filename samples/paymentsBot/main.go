@@ -8,11 +8,11 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/filters/message"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/filters/precheckoutquery"
+	"github.com/asvedr/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext/handlers"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/filters/message"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/filters/precheckoutquery"
 )
 
 // This bot demonstrates how to provide invoices, checkouts, and successful payments through telegram's in-app purchase

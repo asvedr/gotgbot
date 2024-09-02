@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext"
 )
 
 type Named struct {

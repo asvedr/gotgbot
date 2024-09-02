@@ -3,8 +3,8 @@ package shippingquery
 import (
 	"strings"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/filters"
+	"github.com/asvedr/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/filters"
 )
 
 func All(_ *gotgbot.ShippingQuery) bool {

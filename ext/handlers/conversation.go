@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/conversation"
+	"github.com/asvedr/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/conversation"
 )
 
 // TODO: Add a "block" option to force linear processing. Also a "waiting" state to handle blocked handlers.

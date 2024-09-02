@@ -5,10 +5,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers/filters/message"
+	"github.com/asvedr/gotgbot/v2"
+	"github.com/asvedr/gotgbot/v2/ext"
+	"github.com/asvedr/gotgbot/v2/ext/handlers"
+	"github.com/asvedr/gotgbot/v2/ext/handlers/filters/message"
 )
 
 // This bot repeats everything you say - but it uses webhooks instead of long polling.

@@ -1,9 +1,9 @@
-module github.com/PaulSonOfLars/gotgbot/samples/metricsBot
+module github.com/asvedr/gotgbot/samples/metricsBot
 
 go 1.19
 
 require (
-	github.com/PaulSonOfLars/gotgbot/v2 v2.99.99
+	github.com/asvedr/gotgbot/v2 v2.99.99
 	github.com/prometheus/client_golang v1.16.0
 )
 
@@ -19,4 +19,4 @@ require (
 	google.golang.org/protobuf v1.33.0 // indirect
 )
 
-replace github.com/PaulSonOfLars/gotgbot/v2 => ../../
+replace github.com/asvedr/gotgbot/v2 => ../../
